@@ -1,0 +1,51 @@
+node_modules/
+dist/
+*.log
+*.pid
+*.bak
+*.bak.*
+
+# Secrets & local env
+.env
+.env.*
+!.env.example
+.env~
+.env.backup
+*.pem
+*.key
+credentials*.json
+
+# Auth tokens & sessions
+store/google-token.json
+store/google-token-work.json
+store/wa-session/
+store/*.db
+store/*.db-shm
+store/*.db-wal
+store/*.pid
+store/browser-profiles/
+store/e2e-artifacts/
+store/e2e-logs/
+store/long-runner-logs/
+store/long-runner-*.lock
+store/e2e-runner.lock
+store/*-server*.log
+store/endpoints.json
+
+# Local DBs / archives
+data/*.db
+archives/
+
+# Uploads & generated content
+workspace/uploads/
+workspace/presentations/
+workspace/taxes/
+workspace/memory/*
+!workspace/memory/.gitkeep
+workspace/projects/*
+!workspace/projects/.gitkeep
+
+# OS / editor
+.DS_Store
+*.swp
+*~

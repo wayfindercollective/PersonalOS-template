@@ -1,0 +1,52 @@
+{
+  "name": "personalos",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "setup": "tsx scripts/setup.ts",
+    "status": "tsx scripts/status.ts",
+    "schedule": "node dist/schedule-cli.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.1.0",
+    "@discordjs/voice": "^0.19.0",
+    "@noble/ciphers": "^2.1.1",
+    "better-sqlite3": "^11.0.0",
+    "cron-parser": "^5.0.0",
+    "discord.js": "^14.25.1",
+    "googleapis": "^171.4.0",
+    "grammy": "^1.30.0",
+    "mathjs": "^15.2.0",
+    "pino": "^9.0.0",
+    "pino-pretty": "^11.0.0",
+    "playwright": "^1.59.1",
+    "prism-media": "^1.3.5",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.26.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^22.0.0",
+    "@types/qrcode": "^1.5.6",
+    "@types/ws": "^8.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  },
+  "description": "Self-hosted personal AI assistant template (Telegram/Discord) \u2014 Linux, macOS, Windows",
+  "optionalDependencies": {
+    "@discordjs/opus": "^0.10.0",
+    "sodium-native": "^5.1.0",
+    "@snazzah/davey": "^0.1.10"
+  }
+}

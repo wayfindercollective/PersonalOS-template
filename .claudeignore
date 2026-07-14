@@ -1,0 +1,13 @@
+# Runtime state and secrets
+store/
+
+# Build artifacts and dependencies
+dist/
+node_modules/
+
+# Large binary workspace files (db, archives) — PDFs and audio handled by bash tools
+workspace/**/*.db
+workspace/**/*.sqlite
+workspace/**/*.zip
+workspace/**/*.tar
+workspace/**/*.gz

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "personalos-deck-spec-v2",
+  "title": "PersonalOS Deck Spec v2",
+  "description": "Content-only IR. Model fills this; scripts render. Keep it simple.",
+  "type": "object",
+  "required": ["title", "slides"],
+  "additionalProperties": true,
+  "properties": {
+    "title": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "author": { "type": "string", "maxLength": 80 },
+    "subtitle": { "type": "string", "maxLength": 200 },
+    "theme": {
+      "type": "string",
+      "enum": ["midnight", "charcoal", "light", "coral", "forest"]
+    },
+    "output_format": {
+      "type": "string",
+      "enum": ["html", "pptx", "both", "marp-html", "marp-pdf"]
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "title", "section", "content", "two-column",
+              "compare", "stats", "quote", "code"
+            ]
+          },
+          "title": { "type": "string", "maxLength": 100 },
+          "subtitle": { "type": "string", "maxLength": 200 },
+          "eyebrow": { "type": "string", "maxLength": 60 },
+          "body": { "type": "string", "maxLength": 400 },
+          "bullets": {
+            "type": "array",
+            "maxItems": 6,
+            "items": { "type": "string", "maxLength": 160 }
+          },
+          "notes": { "type": "string", "maxLength": 800 },
+          "left": {
+            "description": "two-column: object with heading+bullets; compare: string array",
+            "oneOf": [
+              { "type": "object" },
+              { "type": "array", "items": { "type": "string" } }
+            ]
+          },
+          "right": {
+            "oneOf": [
+              { "type": "object" },
+              { "type": "array", "items": { "type": "string" } }
+            ]
+          },
+          "left_title": { "type": "string", "maxLength": 60 },
+          "right_title": { "type": "string", "maxLength": 60 },
+          "stats": {
+            "type": "array",
+            "maxItems": 6,
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "string" },
+                "label": { "type": "string" }
+              }
+            }
+          },
+          "quote": { "type": "string", "maxLength": 320 },
+          "attribution": { "type": "string", "maxLength": 80 },
+          "code": { "type": "string", "maxLength": 2000 },
+          "language": { "type": "string", "maxLength": 32 }
+        }
+      }
+    }
+  }
+}

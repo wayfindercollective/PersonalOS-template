@@ -1,0 +1,88 @@
+{
+  "title": "Local Models on PersonalOS",
+  "author": "Your Name",
+  "subtitle": "Private inference that still ships work",
+  "theme": "midnight",
+  "output_format": "both",
+  "slides": [
+    {
+      "type": "title",
+      "eyebrow": "PersonalOS demo",
+      "title": "Local Models That Actually Work",
+      "subtitle": "Qwen 3.5 397B plus tools that act",
+      "layout": "bold"
+    },
+    {
+      "type": "stats",
+      "title": "Stack in numbers",
+      "stats": [
+        {
+          "value": "397B",
+          "label": "Qwen MoE params"
+        },
+        {
+          "value": "256GB",
+          "label": "your Mac (optional) memory"
+        },
+        {
+          "value": "0",
+          "label": "Cloud API required"
+        },
+        {
+          "value": "1",
+          "label": "Personal OS"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Why local?",
+      "bullets": [
+        "Privacy for client and sales data",
+        "Cost floor is power and hardware",
+        "Latency on your Tailscale mesh",
+        "You own agent tools and memory"
+      ],
+      "layout": "cards"
+    },
+    {
+      "type": "compare",
+      "title": "Cloud chat vs PersonalOS",
+      "left_title": "Cloud chat",
+      "left": [
+        "Answers in a box",
+        "You paste the work",
+        "Context dies per session"
+      ],
+      "right_title": "PersonalOS",
+      "right": [
+        "Tools that act",
+        "Writes decks and code",
+        "Persistent workspace"
+      ]
+    },
+    {
+      "type": "quote",
+      "quote": "The model is not the product. The system that lets it act is.",
+      "attribution": "PersonalOS design rule"
+    },
+    {
+      "type": "content",
+      "title": "Takeaways",
+      "bullets": [
+        "Serious models run at home now",
+        "Wrap them in tools and delivery",
+        "Skills make demos repeatable"
+      ]
+    },
+    {
+      "type": "title",
+      "title": "Questions",
+      "subtitle": "Built on PersonalOS with a local model"
+    }
+  ],
+  "brand": "personalos",
+  "motif": "aurora",
+  "vibe": "bold",
+  "accent": "electric"
+}
